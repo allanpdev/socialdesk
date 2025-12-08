@@ -20,7 +20,7 @@ body{
     color: white;
 }
 #header_logo{
-    padding: 32px;
+    padding: 30px 32px;
 }
 #header_logo img{
     width: 150px;
@@ -29,7 +29,6 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 4px;
 }
 .menu_item{
     display: flex;
@@ -44,14 +43,12 @@ body{
     align-items: center;
     cursor: pointer;
     position: relative;
-    background: rgba(255,255,255,0.07);
     color: rgb(230, 230, 230);
 }
-/* .menu_item:first-child{
+.menu_item_title.active{
     background: rgba(255,255,255,0.07);
-    color: #fff;
-} */
-.menu_item a{
+}
+.menu_item span{
     color: #fff;
     text-decoration: none;    
 }
@@ -60,28 +57,28 @@ i.icone_expandir_menu{
     right: 24px;
 }
 .submenu{
-    padding: 12px 0;
     display: flex;
     flex-direction: column;
-    gap: 6px;
     display: none;
 }
 .submenu.active{
     display: flex !important;
+    flex-direction: column;
 }
 .submenu a{
-    padding: 12px 36px;
+    color: #fff;
+    padding: 18px 42px;
     cursor: pointer;
+    font-size: 14.5px;
 }
+
+
 
 
 #body{
     padding: 32px;
     width: calc(100vw - 310px);
 }
-
-
-
 table{
     border-collapse: collapse;
     width: 100%;
@@ -90,9 +87,10 @@ table{
 thead{
     background: blue;
     color: #fff;
+    text-align: left;
 }
 th{
-    padding: 12px;
+    padding: 7px;
     border: 1px solid #000;
 }
 td{
