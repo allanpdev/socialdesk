@@ -11,12 +11,50 @@ body{
 }
 #interface{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
+#container{
+    display: flex;
+    height: calc(100vh - 30px);
+}
+#titlebar{
+            width: 100vw;
+            height: 30px;
+            background: rgb(0, 102, 255);
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            -webkit-app-region: drag;
+            justify-content: space-between;
+        }
+        #titlebar-controls{
+            display: flex;
+        }
+        #titlebar-controls button:first-child:hover{
+            background: rgba(255,255,255,0.1);
+        }
+        #titlebar-controls button:last-child:hover{
+            background: rgb(236, 82, 82);
+        }
+        #titlebar-controls > button{
+            -webkit-app-region: no-drag;
+            background: none;
+            border: none;
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #titlebar > span{
+            color: #fff;
+            font-size: 15px;
+        }
 #header{
-    background: rgb(0, 32, 80);
+    background: rgb(0, 19, 49);
     width: 310px;
-    height: 100vh;
+    height: calc(100vh - 30px);
     color: white;
 }
 #header_logo{

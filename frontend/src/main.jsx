@@ -6,7 +6,6 @@ import Painel from './pages/Painel.jsx'
 import GerenciarEntregas from './pages/GerenciarEntregas.jsx'
 import GerenciarUsuarios from './pages/GerenciarUsuarios.jsx'
 
-
 createRoot(document.getElementById('interface')).render(
   <HashRouter>
     <Routes>

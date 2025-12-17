@@ -1,12 +1,17 @@
 import './styles/global.css'
+import Titlebar from './components/Titlebar.jsx'
 import Dropdown from './components/Dropdown.jsx'
 import {Outlet} from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <Dropdown/>
-      <Outlet/>
+      <Titlebar/>
+      
+      <div id="container">
+        <Dropdown/>
+        <Outlet/>
+      </div>
     </>
   )
 }
