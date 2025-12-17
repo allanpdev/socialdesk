@@ -4,7 +4,12 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "electron": "electron ."
+    "app": "",
+    "electron": "electron .",
+    "electron:build": "electron-builder",
+    "vite": "cd frontend && npm run dev",
+    "vite:build": "cd frontend & npm run build",
+    "server": "cd backend && npm run server"
   },
   "repository": {
     "type": "git",
@@ -24,5 +29,24 @@
     "electron": "^39.2.7",
     "electron-builder": "^26.0.12",
     "wait-on": "^9.0.3"
+  },
+  "build": {
+    "appId": "com.socialdesk",
+    "productName": "SocialDesk",
+    "files": [
+      "main.js",
+      "preload.js",
+      "icon.png",
+      "package.json",
+      "login/**/*"
+    ],
+    "directories": {
+      "output": "app"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    }
+
   }
 }

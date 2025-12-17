@@ -15,7 +15,7 @@ function createLoginWindow(){
         }
     })
 
-    loginWindow.loadFile('login/login.html')
+    loginWindow.loadURL('http://localhost:5173/#/login')
 
     loginWindow.webContents.once('did-finish-load', () => {
         loginWindow.show()
