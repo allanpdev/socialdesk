@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "app": "",
-    "electron": "electron .",
+    "app": "concurrently \"npm run vite\" \"npm run electron\" \"npm run server\" -k",
+    "electron": "wait-on tcp:5173 && electron .",
     "electron:build": "electron-builder",
     "vite": "cd frontend && npm run dev",
     "vite:build": "cd frontend & npm run build",
@@ -38,7 +38,7 @@
       "preload.js",
       "icon.png",
       "package.json",
-      "login/**/*"
+      "frontend/dist/**/*"
     ],
     "directories": {
       "output": "app"

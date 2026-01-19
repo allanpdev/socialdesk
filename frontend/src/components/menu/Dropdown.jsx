@@ -1,3 +1,4 @@
+import './dropdown.css'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
 
@@ -5,26 +6,24 @@ const menuItems = [
   {
       title: 'Painel',
       icon: 'fa-solid fa-gauge',
-      route: '/'
+      route: '/sistema'
   },
   {
     title: 'Entregas',
     icon: 'fa-solid fa-box',
-    route: '#',
     submenu: [
       {
          title: 'Buscar',
-         route: '/entregas/buscar'
+         route: '/sistema/buscar-entrega'
       },
       {
          title: 'Gerenciar entregas',
-         route: '/entregas/gerenciar'
+         route: '/sistema/gerenciar-entregas'
       }]
   },
   {
       title: 'Usuários',
       icon: 'fa-solid fa-user',
-      route: '/usuarios',
       submenu: [
          {
             title: 'Buscar',
@@ -50,15 +49,16 @@ const menuItems = [
 ]
 
 export default function Dropdown(){
-    const [isMenuOpen, setOpenMenu] = useState(null)
+   const [isMenuOpen, setOpenMenu] = useState(null)
 
-    function toggleActiveMenu(index){
-        if(isMenuOpen === index){
-            setOpenMenu(null)
-        } else {
-            setOpenMenu(index)
-        }
-    }
+   function toggleActiveMenu(index){
+      console.log(isMenuOpen)
+      if(isMenuOpen === index){
+         setOpenMenu(null)
+      } else {
+         setOpenMenu(index)
+      }
+   }
 
     return(
       <div id="header">
@@ -68,16 +68,16 @@ export default function Dropdown(){
 
          <div id='menu'>
             {menuItems.map((item, index) => {
-               return(
+               return(  
                   <div className={`menu_item`} key={index}>
-                     <div className={`menu_item_title ${window.location.pathname === item.route ? 'active' : ''}`} onClick={() => toggleActiveMenu(index)}>
+                     <Link to={item.route ? item.route : "#"} className={`menu_item_title ${window.location.pathname === item.route ? 'active' : ''}`} onClick={() => toggleActiveMenu(index)}>
                         <i className={`fa-solid ${item.icon}`}></i>
-                        <span href="">{item.title}</span>
+                        <span>{item.title}</span>
                         {item.submenu ? <i className={`fa-solid fa-angle-right icone_expandir_menu`}></i> : null}
-                     </div>
+                     </Link>
                      
-                     {item.submenu ? item.submenu.map((subitem) => (
-                        <div className={`submenu ${isMenuOpen === index ? 'active' : ''}`}>
+                     {item.submenu ? item.submenu.map((subitem, subIndex) => (
+                        <div className={`submenu ${isMenuOpen === index ? 'active' : ''}`} key={subIndex}>
                            <Link to={subitem.route}>- {subitem.title}</Link>
                         </div>
                      )) : null}

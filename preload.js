@@ -2,6 +2,7 @@ const {contextBridge, ipcRenderer} = require('electron')
 
 contextBridge.exposeInMainWorld('electron', {
     minimizeWindow: () => ipcRenderer.send('minimizeWindow'),
+    maximizeWindow: () => ipcRenderer.send('maximizeWindow'),
     closeWindow: () => ipcRenderer.send('closeWindow'),
-    alternateWindow: () => ipcRenderer.send('alternateWindow')
+    successLogin: () => ipcRenderer.send('successLogin')
 })

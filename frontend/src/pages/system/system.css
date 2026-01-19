@@ -1,0 +1,30 @@
+#container{
+    display: flex;
+    height: calc(100vh - 30px);
+}
+#body{
+    padding: 32px;
+    width: calc(100vw - 260px);
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+#heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#heading > button{
+    background: linear-gradient(to bottom right, rgb(0, 89, 255), rgb(28, 54, 173));
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 38px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#body h2{
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+

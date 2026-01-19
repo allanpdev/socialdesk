@@ -1,0 +1,28 @@
+#modal{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal-box{
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    width: 500px;
+}
+#modal-form{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.m_input_field > input, .m_input_field > select{
+    padding: 6px 0;
+}

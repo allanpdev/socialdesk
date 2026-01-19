@@ -1,0 +1,28 @@
+#table{
+    overflow-x: scroll;
+    margin-top: 20px;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    overflow-x: scroll;
+}
+thead{
+    background: rgb(243, 243, 243);
+    color: #d8caca;
+    text-align: left;
+}
+th{
+    padding: 7px 24px;
+    /* border: 1px solid #000; */
+    font-size: 13px;
+    color: #2c2c2c;
+}
+td{
+    padding: 6px 24px;
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 13px;
+}

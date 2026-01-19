@@ -1,19 +1,20 @@
 import {createRoot} from 'react-dom/client'
 import {HashRouter, Routes, Route} from 'react-router-dom'
-import App from './App.jsx'
-
-import Painel from './pages/Painel.jsx'
+// JANELA LOGIN
 import Login from './pages/login/Login.jsx'
-import GerenciarEntregas from './pages/GerenciarEntregas.jsx'
-import GerenciarUsuarios from './pages/GerenciarUsuarios.jsx'
+// JANELA SISTEMA
+import System from './pages/system/System.jsx'
+import Painel from './pages/system/pageContent/Painel.jsx'
+import GerenciarEntregas from './pages/system/pageContent/GerenciarEntregas.jsx'
+import GerenciarUsuarios from './pages/system/pageContent/GerenciarUsuarios.jsx'
 
 createRoot(document.getElementById('interface')).render(
   <HashRouter>
     <Routes>
-      <Route path='/system' element={<App/>}>
+      <Route path='*' element={<System/>}>
         <Route index element={<Painel/>} />
         <Route path='painel' element={<Painel/>}/>
-        <Route path='entregas/gerenciar' element={<GerenciarEntregas/>} />
+        <Route path='gerenciar-entregas' element={<GerenciarEntregas/>} />
         <Route path='usuarios/gerenciar' element={<GerenciarUsuarios/>} />
       </Route>
 

@@ -1,6 +1,6 @@
-import './styles/global.css'
-import Titlebar from './components/Titlebar.jsx'
-import Dropdown from './components/Dropdown.jsx'
+import './system.css'
+import Titlebar from '../../components/titlebar/Titlebar.jsx'
+import MenuLateral from '../../components/menu/Dropdown.jsx'
 import {Outlet} from 'react-router-dom'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Titlebar/>
       
       <div id="container">
-        <Dropdown/>
+        <MenuLateral/>
         <Outlet/>
       </div>
     </>

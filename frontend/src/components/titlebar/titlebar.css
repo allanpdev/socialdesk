@@ -1,0 +1,38 @@
+#titlebar{
+    width: 100vw;
+    height: 30px;
+    background: rgb(0, 102, 255);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    -webkit-app-region: drag;
+    justify-content: space-between;
+}
+#titlebar-controls{
+    display: flex;
+}
+#titlebar-controls button:nth-child(1):hover{
+    background: rgba(255,255,255,0.1);
+}
+#titlebar-controls button:nth-child(2):hover{
+    background: rgba(255,255,255,0.1);
+}
+#titlebar-controls button:nth-child(3):hover{
+    background: rgb(236, 82, 82);
+}
+#titlebar-controls > button{
+    -webkit-app-region: no-drag;
+    background: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#titlebar > span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
